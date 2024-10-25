@@ -5,9 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirection...</title>
     <script>
+        // Mendapatkan URL saat ini
         const currentUrl = new URL(window.location.href);
-        const params = currentUrl.search; // Mendapatkan semua parameter URL
-        const targetUrl = "https://a.medfoodsafety.com/loader?a=4796007&s=4781822&t=4&p=15427&s1=" + params;
+        const params = new URLSearchParams(currentUrl.search);
+
+        // Mendapatkan nilai parameter dari URL
+        const source_id = params.get("source_id") || "";
+        const sub_id = params.get("sub_id") || "";
+        const campaign_id = params.get("campaign_id") || "";
+        const click_id = params.get("click_id") || "";
+
+        // Menyusun URL target dengan parameter yang didapatkan secara otomatis
+        const targetUrl = `https://fullpornxxx.me/?p=1&s1=${source_id}&kw=hdporn&s2=${sub_id}&campaign_id=${campaign_id}&click_id=${click_id}`;
 
         // Redirect langsung ke URL target
         window.location.href = targetUrl;
